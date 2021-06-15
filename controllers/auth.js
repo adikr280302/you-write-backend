@@ -105,7 +105,7 @@ exports.login = (req,res,next)=>{
         const token = jwt.sign({
             email: foundUser.email,
             userId: foundUser._id.toString()
-        },'kjkj!#@#@!$nbsjk34njknsdhfi4',
+        },'hash_code',
         {expiresIn:'1h'});
         res.status(200).json({token:token,userId:foundUser._id.toString()});
     })

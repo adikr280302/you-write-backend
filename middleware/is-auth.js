@@ -12,7 +12,7 @@ module.exports = (req,res,next)=>{
     const token = authHeader.split(' ')[1];
     let decodedToken;
     try{
-        decodedToken = jwt.verify(token,'kjkj!#@#@!$nbsjk34njknsdhfi4');
+        decodedToken = jwt.verify(token,'hash_code');
     }
     catch(err){
         err.statusCode = 500;
